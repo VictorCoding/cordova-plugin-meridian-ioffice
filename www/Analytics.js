@@ -4,11 +4,18 @@
 var exec = require('cordova/exec');
 
 module.exports = {
-    testing: function(eventName, properties, success, error) {
-        exec(success, error, "MeridianiOFFICE", "testing",
+    trackEvent: function(eventName, properties, success, error) {
+        exec(success, error, "AppCenterAnalytics", "trackEvent",
             [eventName, sanitizeProperties(properties)]);
     },
 
+    isEnabled: function(success, error) {
+        exec(success, error, "AppCenterAnalytics", "isEnabled", []);
+    },
+
+    setEnabled: function(enabled, success, error) {
+        exec(success, error, "AppCenterAnalytics", "setEnabled", [enabled]);
+    },
 
     /*
     // TODO: Uncomment this once the underlying SDK supports the functionality

@@ -5,9 +5,11 @@
 #import <Cordova/CDVPlugin.h>
 
 // Implements Apache Cordova plugin for App Center Analytics
-@interface MeridianiOFFICEPlugin : CDVPlugin
+@interface AppCenterAnalyticsPlugin : CDVPlugin
 
 - (void)pluginInitialize;
 
-- (void)testing:(CDVInvokedUrlCommand *)command;
+- (void)trackEvent:(CDVInvokedUrlCommand *)command;
+- (void)isEnabled:(CDVInvokedUrlCommand *)command;
+- (void)setEnabled:(CDVInvokedUrlCommand *)command;
 @end
