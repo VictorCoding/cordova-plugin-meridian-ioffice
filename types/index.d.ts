@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-declare namespace AppCenter {
+declare namespace MeridianiOFFICE {
     let Analytics: {
         trackEvent(
             eventName: string,
